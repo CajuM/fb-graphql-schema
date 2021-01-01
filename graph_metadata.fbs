@@ -1,0 +1,95 @@
+table F1 {
+  F1_f1:[F1_F1];   // todo: what for?
+}
+
+struct F1_F1 {
+  F1_F1_f1:short;  // todo: what for?
+  F1_F1_f2:short;  // todo: what for?
+}
+
+table F2 {
+  F2_f1:uint;      // todo: what for?
+  F2_f2:[uint];    // todo: what for?
+}
+
+struct F3 {
+  F3_f1:short;     // todo: what for?
+  F3_f2:short;     // todo: what for?
+  F3_f3:short;     // todo: what for?
+  F3_f4:short;     // todo: what for?
+  F3_f5:short;     // todo: what for?
+  F3_f6:short;     // todo: what for?
+}
+
+struct F4 {
+  F4_f1:short;     // index in F9, field name
+  F4_f2:short;     // index in F5
+  F4_f3:short;     // index in F6?
+}
+
+table F5 {
+  F5_f1:string;    // type name
+  F5_f2:short;     // primary key?
+  F5_f3:[short];   // index in F4, fields
+  F5_f4:[short];   // todo: what for?
+}
+
+table F7 {
+  F7_f1:string;    // todo: what for?
+  F7_f2:short;     // todo: what for?
+  F7_f3:[F7_F3];   // todo: what for?
+  F7_f4:short;     // todo: what for?
+  F7_f5:[F7_F5];   // todo: what for?
+  F7_f6:short;     // todo: what for?
+  F7_f7:short;     // todo: what for?
+  F7_f8:[uint];    // todo: [uint] is always [234], it is an invalid offset and uint is always 8
+  F7_f9:uint;      // todo: what for?
+  F7_f10:uint;     // always absent
+}
+
+table F7_F3 {
+  F7_F3_f1:short;         // todo: what for?
+  F7_F3_f2:[F7_F3_F2];    // todo: what for?
+}
+
+struct F7_F3_F2 {
+  F7_F3_F2_f1:short;      // todo: what for?
+  F7_F3_F2_f2:short;      // todo: what for?
+}
+
+struct F7_F5 {
+  F7_F5_f1:short;  // todo: what for?
+  F7_F5_f2:short;  // todo: what for?
+}
+
+table F8 {
+  F8_f1:uint;      // todo: what for?
+  F8_f2:ulong;     // todo: what for?
+  F8_f3:ulong;     // todo: what for?
+  F8_f4:uint;      // todo: is this realy a uint?
+  F8_f5:uint;      // todo: is this realy a uint?
+  F8_f6:uint;      // todo: is this realy a uint?
+  F8_f7:uint;      // todo: is this realy a uint?
+  F8_f8:[F8_F8];   // todo: what for?
+  F8_f9:uint;      // todo: is this realy a uint?
+  F8_f10:uint;     // always absent
+}
+
+struct F8_F8 {
+  F8_F8_f1:short;  // what for?
+  F8_F8_f2:short;  // what for?
+}
+
+table ROOT {
+  f1:[F1];         // todo: what for?
+  f2:[F2];         // todo: what for?
+  f3:[F3];         // todo: what for?
+  f4:[F4];         // todo: what for?
+  f5:[F5];         // todo: what for?
+  f6:[short];      // base types? index in F9
+  f7:[F7];         // todo: what for?
+  f8:[F8];         // todo: what for?
+  f9:[string];     // todo: what for?
+}
+
+root_type ROOT;
